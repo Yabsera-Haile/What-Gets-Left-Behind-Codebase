@@ -1,0 +1,20 @@
+task: flores_ceb_eng
+dataset_path: Muennighoff/flores200
+dataset_name: all
+dataset_kwargs:
+  trust_remote_code: true    # Muennighoff/flores200 uses a loader script
+test_split: devtest
+output_type: generate_until
+doc_to_text: "Translate the following sentence from Cebuano to English.\nCebuano: {{sentence_ceb_Latn}}\nEnglish:"
+doc_to_target: "{{sentence_eng_Latn}}"
+generation_kwargs:
+  until:
+    - "\n"
+  max_gen_toks: 256
+  do_sample: false
+metric_list:
+  - metric: chrf                 # chrF++ via the custom aggregation below
+    aggregation: !function utils.chrf_pp_agg
+    higher_is_better: true
+metadata:
+  version: 1.0

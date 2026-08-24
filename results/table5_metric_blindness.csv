@@ -1,0 +1,5 @@
+condition,heldout_ppl,ppl_sd,chrf_eng_to_xx,chrf_xx_to_eng,belebele_acc
+random,27.94,0.01,30.78,50.18,0.422
+perplexity-low,37.31,0.72,30.09,50.07,0.397
+quality,35.01,0.0,32.47,51.17,0.432
+perplexity-high,29.18,0.0,7.83,21.15,0.237

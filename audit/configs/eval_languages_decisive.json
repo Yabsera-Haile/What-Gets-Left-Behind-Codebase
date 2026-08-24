@@ -1,0 +1,16 @@
+{
+  "_about": "A-Step 1 cross-model gate: the 7 decisive low-resource languages (the pool's injected set) + the 4 high-resource controls. run_eval's above-chance gate (acc - 1.645*stderr > 0.25) uses the low_resource set; controls are a sanity reference (a base that fails chance on eng/spa is broken, not just non-multilingual).",
+  "languages": [
+    {"iso": "ceb", "role": "low_resource"},
+    {"iso": "hau", "role": "low_resource"},
+    {"iso": "kir", "role": "low_resource"},
+    {"iso": "mlt", "role": "low_resource"},
+    {"iso": "plt", "role": "low_resource"},
+    {"iso": "som", "role": "low_resource"},
+    {"iso": "zul", "role": "low_resource"},
+    {"iso": "eng", "role": "control"},
+    {"iso": "spa", "role": "control"},
+    {"iso": "cmn", "role": "control"},
+    {"iso": "arb", "role": "control"}
+  ]
+}

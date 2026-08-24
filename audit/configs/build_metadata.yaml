@@ -1,0 +1,46 @@
+# Config for audit/metadata/build_metadata.py (Phase 1 pilot).
+# Every value here can be overridden on the CLI; CLI wins over YAML.
+
+# Pool source: a HuggingFace dataset id (streamed) OR a path to a local .jsonl.
+# Streaming chosen for the pilot to avoid the 6.7GB training_data.zip download.
+pool: allenai/tulu-3-sft-mixture
+
+# Where the streamed/sampled pilot pool is materialized (defines pool_row_idx).
+materialized_pool: audit/results/pool_pilot.jsonl
+
+# Pilot subsample.
+sample_size: 10000
+seed: 42
+# Sampling strategy for HF-streamed pools:
+#   reservoir   - seeded reservoir sample over the FULL stream (representative; streams
+#                 the whole ~1.35GB mixture once, cached). Required because Tulu-3 is
+#                 grouped by source on disk.
+#   head_buffer - cheap shuffle-buffer take (biased to first sources); smoke tests only.
+sampling_strategy: reservoir
+# Only used by head_buffer strategy.
+buffer_size: 50000
+
+# Output metadata table.
+output: audit/results/metadata_pilot.parquet
+
+# Mapping configs.
+dataset_to_skill: audit/configs/dataset_to_skill.json
+joshi_resource: audit/configs/joshi_resource.json
+
+# Language identification.
+langid_backend: glotlid   # glotlid | py3langid  (glotlid falls back to py3langid if unavailable)
+
+# Tokenizer for token_len. Empty => whitespace word-count proxy (token_len_approx).
+tokenizer: ""
+
+# Run log (in addition to stdout).
+log_file: audit/results/build_metadata.log
+
+# --- MURI-IT injection (C-Step 5): enrich low-resource buckets ---
+# Used by audit.metadata.inject_muri. Stream akoksal/muri and top up Joshi buckets 0-2.
+muri_dataset: akoksal/muri
+enriched_pool: audit/results/pool_pilot_enriched.jsonl
+muri_n: 2000                  # cap on total MURI examples injected (CLI: --muri_n)
+muri_target_per_bucket: 500   # desired FINAL count for each of buckets 0,1,2
+muri_per_config_cap: 150      # max per language config (diversifies languages)
+muri_max_scan: 200000         # safety cap on MURI examples scanned

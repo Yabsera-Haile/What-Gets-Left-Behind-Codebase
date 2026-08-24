@@ -1,0 +1,32 @@
+{
+  "_comment": "Approximate Joshi et al. (2020, 'The State and Fate of Linguistic Diversity', ACL) resource classes 0-5, keyed by ISO 639-3 (the codes GlotLID emits). 5=high-resource 'winners', 0='left-behind'. Boundary membership is approximate and curated for the languages likely to appear in the Tulu-3 Aya split; refine as needed. Any language not listed here defaults to class 0 (and is logged by build_metadata.py). The analytically important contrast is low-resource (0-2) vs high-resource (3-5).",
+  "default": 0,
+  "classes": {
+    "eng": 5,
+    "deu": 5, "fra": 5, "spa": 5, "jpn": 5, "cmn": 5, "zho": 5, "arb": 5, "ara": 5,
+
+    "rus": 4, "por": 4, "ita": 4, "nld": 4, "kor": 4, "hin": 4, "tur": 4,
+    "vie": 4, "fas": 4, "pes": 4, "pol": 4, "ind": 4, "fin": 4, "swe": 4,
+    "dan": 4, "nob": 4, "nor": 4, "nno": 4, "ces": 4, "ell": 4, "heb": 4,
+    "ron": 4, "hun": 4, "tha": 4, "ukr": 4, "bul": 4, "cat": 4,
+
+    "ben": 3, "tam": 3, "tel": 3, "mar": 3, "urd": 3, "zsm": 3, "msa": 3,
+    "tgl": 3, "fil": 3, "swh": 3, "swa": 3, "afr": 3, "hrv": 3, "srp": 3,
+    "slk": 3, "slv": 3, "lit": 3, "lav": 3, "est": 3, "glg": 3, "eus": 3,
+    "isl": 3, "gle": 3, "cym": 3, "kat": 3, "hye": 3, "aze": 3, "azj": 3,
+    "kaz": 3, "uzb": 3, "uzn": 3, "npi": 3, "nep": 3, "sin": 3, "khm": 3,
+    "lao": 3, "mya": 3, "amh": 3, "kan": 3, "mal": 3, "guj": 3, "pan": 3,
+    "ory": 3, "ori": 3, "asm": 3,
+
+    "hau": 2, "zul": 2, "yor": 2, "ibo": 2, "xho": 2, "sna": 2, "nya": 2,
+    "sot": 2, "som": 2, "mlg": 2, "plt": 2, "kin": 2, "lug": 2, "wol": 2,
+    "tsn": 2, "tso": 2, "ssw": 2, "ven": 2, "nbl": 2, "kir": 2, "tgk": 2,
+    "tat": 2, "bak": 2, "bel": 2, "mkd": 2, "sqi": 2, "hye_west": 2,
+    "mlt": 2, "ltz": 2, "fao": 2, "epo": 2, "lat": 2, "san": 2,
+
+    "ckb": 1, "kur": 1, "pus": 1, "snd": 1, "uig": 1, "bod": 1, "dzo": 1,
+    "tir": 1, "orm": 1, "gla": 1, "bre": 1, "oci": 1, "ast": 1, "que": 1,
+    "grn": 1, "aym": 1, "hat": 1, "smo": 1, "ton": 1, "mri": 1, "haw": 1,
+    "jav": 1, "sun": 1, "ceb": 1, "ilo": 1, "war": 1, "pam": 1, "hil": 1
+  }
+}

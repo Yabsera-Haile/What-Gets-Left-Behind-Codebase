@@ -1,0 +1,33 @@
+{
+  "round": 4,
+  "base_model": "google/gemma-3-4b-pt",
+  "injection_size_N": 2000,
+  "N_rationale": "Phase-2 dose-response on plt: liftoff at ~250 examples (65.7% of the total 0->4000 perplexity gain), plateau 250->1000, further gain by 4000. N=2000 puts full-data well past the liftoff while keeping fair-share kept-at-budget amounts (N*b = 20/100/200 at 1/5/10%) on the STEEPEST part of the curve, where selector differences are most detectable. All 7 decisive languages have >=3x N usable in MURI-IT.",
+  "decisive_languages": ["ceb", "hau", "kir", "mlt", "plt", "som", "zul"],
+  "dropped_languages": {
+    "bod": "MURI usable ~1655 < N (3311 raw x 50% GlotLID yield); also only marginally above chance in R3 (lower bound 0.252).",
+    "tsn": "MURI usable ~933 < N (4668 raw x 20% GlotLID yield); also marginal in R3 (lower bound 0.263).",
+    "wol": "MURI usable ~891 < N (4457 raw x 20% GlotLID yield); also marginal in R3 (lower bound 0.253)."
+  },
+  "muri_configs": {
+    "ceb": "ceb", "hau": "hau", "kir": "kir", "mlt": "mlt",
+    "plt": "mlg", "som": "som", "zul": "zul"
+  },
+  "muri_coverage": {
+    "ceb": {"raw": 13500, "yield": 0.95, "usable": 12825},
+    "hau": {"raw": 8045, "yield": 0.935, "usable": 7522},
+    "kir": {"raw": 6718, "yield": 1.0, "usable": 6718},
+    "mlt": {"raw": 12183, "yield": 0.99, "usable": 12061},
+    "plt": {"raw": 13500, "yield": 0.99, "usable": 13365},
+    "som": {"raw": 7526, "yield": 0.88, "usable": 6622},
+    "zul": {"raw": 11242, "yield": 0.57, "usable": 6407},
+    "bod": {"raw": 3311, "yield": 0.50, "usable": 1655},
+    "tsn": {"raw": 4668, "yield": 0.20, "usable": 933},
+    "wol": {"raw": 4457, "yield": 0.20, "usable": 891}
+  },
+  "notes": [
+    "GlotLID yield matters: MURI configs are ISO 639-3 and can contain related-language or off-target text. plt is drawn from the Malagasy MACROLANGUAGE config 'mlg' (99% GlotLID->plt).",
+    "bod/tsn/wol fail BOTH filters independently (marginally-above-chance in R3 AND insufficient native MURI supply), so dropping them is not a post-hoc convenience.",
+    "Concentrated rebuild: 7 languages x N=2000 = 14000 injected into the 10755 non-target base -> ~24755 pool (~57% injected). This is deliberately multilingual-heavy; results describe that regime."
+  ]
+}

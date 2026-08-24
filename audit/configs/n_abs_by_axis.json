@@ -1,0 +1,44 @@
+{
+  "language": {
+    "default": 500
+  },
+  "skill": {
+    "math": {
+      "n_abs": 150,
+      "regime": "dense"
+    },
+    "code": {
+      "n_abs": 150,
+      "regime": "dense"
+    },
+    "chat": {
+      "n_abs": 150,
+      "regime": "dense"
+    },
+    "general": {
+      "n_abs": 150,
+      "regime": "dense"
+    },
+    "science": {
+      "n_abs": 500,
+      "regime": "rare"
+    },
+    "safety": {
+      "n_abs": 500,
+      "regime": "rare"
+    },
+    "instruction_following": {
+      "n_abs": 500,
+      "regime": "rare"
+    },
+    "multilingual": {
+      "n_abs": 500,
+      "regime": "rare"
+    },
+    "other": {
+      "n_abs": 250,
+      "regime": "catch-all"
+    },
+    "default": 250
+  }
+}

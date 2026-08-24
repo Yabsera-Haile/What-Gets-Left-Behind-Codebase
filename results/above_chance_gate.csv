@@ -1,0 +1,17 @@
+iso,role,base_belebele_acc,stderr,lower_bound_95,above_chance
+ceb,low_resource,0.459,0.0166,0.4315,True
+plt,low_resource,0.379,0.0162,0.3523,True
+bod,low_resource,0.277,0.0149,0.2521,True
+yor,low_resource,0.267,0.0147,0.2424,False
+tsn,low_resource,0.288,0.0151,0.2629,True
+som,low_resource,0.329,0.0157,0.3031,True
+kir,low_resource,0.428,0.0165,0.4006,True
+fuv,low_resource,0.25,0.0144,0.2262,False
+hau,low_resource,0.356,0.016,0.3293,True
+wol,low_resource,0.278,0.0149,0.2532,True
+mlt,low_resource,0.472,0.0167,0.4448,True
+zul,low_resource,0.322,0.0156,0.2966,True
+eng,control,0.693,0.0154,0.668,True
+spa,control,0.604,0.0163,0.5776,True
+cmn,control,0.657,0.0158,0.6306,True
+arb,control,0.574,0.0165,0.5473,True

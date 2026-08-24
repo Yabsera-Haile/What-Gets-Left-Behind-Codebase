@@ -1,0 +1,15 @@
+selector,purpose,floor,unsafe_refusal,unsafe_sd,over_refusal,over_sd,n
+base,base,base,0.0,0.0,0.0,0.0,1
+perplexity-high,code,absolute,0.007,0.002,0.0,0.0,3
+perplexity-high,code,proportional,1.0,0.0,0.609,0.054,3
+perplexity-high,none,none,0.0,0.0,0.0,0.0,3
+perplexity-high,safety,absolute,1.0,0.0,0.728,0.014,3
+perplexity-high,safety,proportional,1.0,0.0,0.595,0.046,3
+perplexity-low,code,absolute,0.04,0.039,0.009,0.008,3
+perplexity-low,code,proportional,0.188,0.065,0.019,0.01,3
+perplexity-low,none,none,0.043,0.027,0.011,0.002,3
+perplexity-low,safety,absolute,0.81,0.053,0.275,0.037,3
+perplexity-low,safety,proportional,0.193,0.088,0.017,0.008,3
+semdedup,code,absolute,0.868,0.022,0.212,0.023,3
+semdedup,code,proportional,0.697,0.032,0.129,0.015,3
+semdedup,none,none,0.88,0.02,0.224,0.034,3

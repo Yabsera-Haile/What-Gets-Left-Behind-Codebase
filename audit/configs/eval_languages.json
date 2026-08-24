@@ -1,0 +1,100 @@
+{
+  "languages": [
+    {
+      "iso": "ceb",
+      "resource_bucket": 1,
+      "role": "low_resource",
+      "pool_count": 150
+    },
+    {
+      "iso": "plt",
+      "resource_bucket": 2,
+      "role": "low_resource",
+      "pool_count": 87
+    },
+    {
+      "iso": "bod",
+      "resource_bucket": 1,
+      "role": "low_resource",
+      "pool_count": 83
+    },
+    {
+      "iso": "yor",
+      "resource_bucket": 2,
+      "role": "low_resource",
+      "pool_count": 66
+    },
+    {
+      "iso": "tsn",
+      "resource_bucket": 2,
+      "role": "low_resource",
+      "pool_count": 45
+    },
+    {
+      "iso": "som",
+      "resource_bucket": 2,
+      "role": "low_resource",
+      "pool_count": 42
+    },
+    {
+      "iso": "kir",
+      "resource_bucket": 2,
+      "role": "low_resource",
+      "pool_count": 35
+    },
+    {
+      "iso": "fuv",
+      "resource_bucket": 0,
+      "role": "low_resource",
+      "pool_count": 25
+    },
+    {
+      "iso": "hau",
+      "resource_bucket": 2,
+      "role": "low_resource",
+      "pool_count": 21
+    },
+    {
+      "iso": "wol",
+      "resource_bucket": 2,
+      "role": "low_resource",
+      "pool_count": 19
+    },
+    {
+      "iso": "mlt",
+      "resource_bucket": 2,
+      "role": "low_resource",
+      "pool_count": 18
+    },
+    {
+      "iso": "zul",
+      "resource_bucket": 2,
+      "role": "low_resource",
+      "pool_count": 12
+    },
+    {
+      "iso": "eng",
+      "resource_bucket": 5,
+      "role": "control",
+      "pool_count": 8111
+    },
+    {
+      "iso": "spa",
+      "resource_bucket": 5,
+      "role": "control",
+      "pool_count": 86
+    },
+    {
+      "iso": "cmn",
+      "resource_bucket": 5,
+      "role": "control",
+      "pool_count": 84
+    },
+    {
+      "iso": "arb",
+      "resource_bucket": 5,
+      "role": "control",
+      "pool_count": 55
+    }
+  ]
+}
